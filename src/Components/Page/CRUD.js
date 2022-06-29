@@ -37,15 +37,15 @@ function Crud() {
         console.log("hello")
     }
 
-    let printLocalStorage = () => {
-        return localStorage.getItem("todos").map(item => {
-            return(
-                <div>
-                    {item}
-                </div>
-            )
-        })
-    }
+    // let printLocalStorage = () => {
+    //     return localStorage.getItem("todos").map(item => {
+    //         return(
+    //             <div>
+    //                 {item}
+    //             </div>
+    //         )
+    //     })
+    // }
 
     let printArr = () => {
         return todos.map(item => {
