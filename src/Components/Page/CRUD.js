@@ -5,13 +5,14 @@ function Crud() {
     const localArr = localStorage.getItem("todos");
     
     const [title, setTitle] = useState("");
-    const [todos, setTodos] = useState([]);
-    localStorage.setItem("todos", JSON.stringify([todos]))
+    const [todos, setTodos] = useState();
     const [count, setCount] = useState([JSON.parse(localArr).length]);
+    
+    localStorage.setItem("todos", JSON.stringify(todos));
 
     useEffect(() => {
         setTodos(JSON.parse(localArr));
-    }, [localArr]);
+    }, []);
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value);
@@ -65,7 +66,7 @@ function Crud() {
                     <p className="Home__Counter">You have {count} ToDos left to complete</p>
                 </div>
                 <div className="Home__ToDos">
-                    {() => printArr()}
+                    {printArr()}
                 </div>
 
             </div>
