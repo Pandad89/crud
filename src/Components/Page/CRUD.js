@@ -65,7 +65,7 @@ function Crud() {
                     <p className="Home__Counter">You have {count} ToDos left to complete</p>
                 </div>
                 <div className="Home__ToDos">
-                    {printArr()}
+                    {() => printArr()}
                 </div>
 
             </div>
