@@ -60,7 +60,7 @@ function Crud() {
                 <div className="Home__CreateItem">
                     <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={() => handleSubmit}></input>
                     <div className="Home__CreateItem__Buttons">
-                        <button className="Home__CreateItem__Buttons__Submit" onClick={() => handleSubmit}>Submit ToDo</button>
+                        <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
                         {/* <button onClick={handleLogs}>Logs</button> */}
                     </div>
                     <p className="Home__Counter">You have {count} ToDos left to complete</p>
