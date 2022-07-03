@@ -58,7 +58,7 @@ function Crud() {
                 <h1 className="Home__Container__HeaderL">Welcome to AEOTDLA</h1> <br />
                 <h6 className="Home__Container__HeaderS">(Adam's Extremely Original ToDo List App)</h6>
                 <div className="Home__CreateItem">
-                    <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={() => handleSubmit}></input>
+                    <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={handleSubmit}></input>
                     <div className="Home__CreateItem__Buttons">
                         <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
                         {/* <button onClick={handleLogs}>Logs</button> */}
