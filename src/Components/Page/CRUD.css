@@ -2,7 +2,7 @@
     display: flex;
     height: 100vh;
     background: url("../../Img/paper.png");
-    background-size: 60%;
+    background-size: 60.5%;
     background-position-x: 50rem;
     background-position-y: -9rem;
     background-repeat: no-repeat;
@@ -11,8 +11,14 @@
 }
 
 .Home__Container {
-    height: 56rem;
-    padding: 1rem 0 0 1rem;
+    height: 57.8rem;
+    height: 100vh;
+    width: 50.9rem;
+    
+    padding: 14.6rem 0 0 1rem;
+    background-image: url("../../Img/table.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
 }
 
 .Home__CreateItem {
@@ -29,25 +35,39 @@
     gap: 1rem;
 }
 .Home__CreateItem input {
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Roboto', sans-serif;
+    padding-left: .5rem;
     font-size: 2rem;
     width: 45rem;
 }
 .Home__CreateItem button {
-    font-family: 'Yellowtail', cursive;
     font-size: 1.5rem;
     width: 10rem;
     height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.Home__CreateItem button:nth-child(2) {
+    font-size: 1.2rem;
+}
+.Home__Container__HeaderL{
+    text-align: center;
+    font-size: 3.25rem;
+    font-family: 'Roboto', sans-serif;
 }
 .Home__Container__HeaderS{
-    text-align: center;
+    position: absolute;
+    left: 28.9rem;
+    top: 18.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 .Home__Counter {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .ArrItem__Buttons {
@@ -77,14 +97,38 @@
     display: flex;
 
 }
+.ArrItem__Item{
+ /* padding: Up Right Down  Left */
+    padding: 0  .5rem .3rem .3rem ;
+    margin:  -.25rem  0     0     0;
+}
+
 .Home__ToDos{
-    height: 100vh;
     position: absolute;
     left: 60.5rem;
     top: 0;
     display: flex;
     flex-direction: column;
-    width: 49vw;
-    height: 100vh;
+    width: 47vw;
     /* border: 1px solid red; */
+}
+.ArrItem__Buttons__Checkbox{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: .8rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out .2s;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: none;
+}
+.ArrItem__Buttons__Checkbox:hover{
+    transition: ease-in-out .2s;
+    color: #EFEFEF;
+    background-color: green;
+    border-radius: 50%;
+    border: none;
 }

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './CRUD.css'
 
 function Crud() {
 
+    const localArr = localStorage.getItem("todos");
+
     const [title, setTitle] = useState("");
     const [todos, setTodos] = useState([]);
-    const [count, setCount] = useState(todos.length);
+    const [count, setCount] = useState([JSON.parse(localArr).length]);
 
-
+    useEffect(() => {
+        setTodos(JSON.parse(localArr));
+    }, []);
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value);
@@ -23,40 +27,25 @@ function Crud() {
         }
     }
 
-    const handleTodoCount = (e) => {
-        console.log(e.target)
-        if (e.target.checked === true) {
-            setCount(count - 1);
-        }
-        if (e.target.checked === false) {
-            setCount(count + 1);
-        }
+    const handleDelete = (e) => {
+        todos.splice(e.target.id, 1);
+        setTodos(todos);
+        setCount(todos.length);
+        localStorage.setItem("todos", JSON.stringify(todos));
     }
 
-    const handleDelete = () => {
-        console.log("hello")
+    const handleLogs = () => {
+        console.log("Count", count)
     }
-
-    // let printLocalStorage = () => {
-    //     return localStorage.getItem("todos").map(item => {
-    //         return(
-    //             <div>
-    //                 {item}
-    //             </div>
-    //         )
-    //     })
-    // }
 
     let printArr = () => {
-        return todos.map(item => {
+        return todos.map((item, e) => {
             return (
-                <div className="ArrItem">
+                <div key={e} className="ArrItem">
                     <div className="ArrItem__Buttons">
-                        <input key={todos.indexOf(item)} type="checkbox" onChange={handleTodoCount}></input>
+                        <button id={e} className="ArrItem__Buttons__Checkbox" onClick={handleDelete}>✓</button>
                     </div>
-                    <div className="ArrItem__Item">
-                        {item}
-                    </div>
+                    <p className="ArrItem__Item">{item}</p>
                 </div>
             )
         })
@@ -65,13 +54,13 @@ function Crud() {
     return (
         <div className="Home">
             <div className="Home__Container">
-                <h1 className="Home__Container__HeaderL">Wecome to Adam's ToDo List App</h1> <br />
-                <h4 className="Home__Container__HeaderS">To clear the list, refresh the page</h4><br />
+                <h1 className="Home__Container__HeaderL">Welcome to AEOTDLA</h1> <br />
+                <h6 className="Home__Container__HeaderS">(Adam's Extremely Original ToDo List App)</h6>
                 <div className="Home__CreateItem">
                     <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={handleSubmit}></input>
                     <div className="Home__CreateItem__Buttons">
                         <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
-                        <button className="Home__CreateItem__Buttons__Delete" onClick={handleDelete}>Clear Completed ToDos</button>
+                        {/* <button onClick={handleLogs}>Logs</button> */}
                     </div>
                     <p className="Home__Counter">You have {count} ToDos left to complete</p>
                 </div>
