@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './CRUD.css'
 
 function Crud() {
-
+    localStorage.setItem("todos")
     const localArr = localStorage.getItem("todos");
 
     const [title, setTitle] = useState("");
