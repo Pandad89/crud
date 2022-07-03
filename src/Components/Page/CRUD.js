@@ -5,7 +5,7 @@ function Crud() {
     const localArr = localStorage.getItem("todos");
     
     const [title, setTitle] = useState("");
-    const [todos, setTodos] = useState();
+    const [todos, setTodos] = useState([]);
     const [count, setCount] = useState([JSON.parse(localArr).length]);
     
     localStorage.setItem("todos", JSON.stringify(todos));
