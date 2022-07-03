@@ -34,9 +34,9 @@ function Crud() {
         localStorage.setItem("todos", JSON.stringify(todos));
     }
 
-    const handleLogs = () => {
-        console.log("Count", count)
-    }
+    // const handleLogs = () => {
+    //     console.log("Count", count)
+    // }
 
     let printArr = () => {
         return todos.map((item, e) => {
