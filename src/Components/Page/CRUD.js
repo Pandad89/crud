@@ -12,7 +12,7 @@ function Crud() {
 
     useEffect(() => {
         setTodos(JSON.parse(localArr));
-    }, [localArr]);
+    });
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value);
