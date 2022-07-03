@@ -12,7 +12,7 @@ function Crud() {
 
     useEffect(() => {
         setTodos(JSON.parse(localArr));
-    }, []);
+    }, [localArr]);
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value);
@@ -58,9 +58,9 @@ function Crud() {
                 <h1 className="Home__Container__HeaderL">Welcome to AEOTDLA</h1> <br />
                 <h6 className="Home__Container__HeaderS">(Adam's Extremely Original ToDo List App)</h6>
                 <div className="Home__CreateItem">
-                    <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={handleSubmit}></input>
+                    <input placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={() => handleSubmit}></input>
                     <div className="Home__CreateItem__Buttons">
-                        <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
+                        <button className="Home__CreateItem__Buttons__Submit" onClick={() => handleSubmit}>Submit ToDo</button>
                         {/* <button onClick={handleLogs}>Logs</button> */}
                     </div>
                     <p className="Home__Counter">You have {count} ToDos left to complete</p>
