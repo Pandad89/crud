@@ -7,7 +7,7 @@ function Crud() {
     const [title, setTitle] = useState("");
     const [todos, setTodos] = useState([]);
     const localArr = localStorage.getItem("todos");
-    // const [count, setCount] = useState(todos.length);
+    const [count, setCount] = useState(todos.length);
 
     if(!localStorage.getItem("todos")){
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -15,6 +15,7 @@ function Crud() {
 
     useEffect(() => {
         setTodos(JSON.parse(localArr));
+        setCount(JSON.parse(localArr).length)
     }, [localArr]);
 
     const handleChangeTitle = (e) => {
@@ -26,7 +27,7 @@ function Crud() {
             todos.push(title);
             setTodos(todos);
             localStorage.setItem("todos", JSON.stringify(todos));
-            // setCount(todos.length);
+            setCount(todos.length);
             setTitle('');
         }
     }
@@ -34,7 +35,7 @@ function Crud() {
     const handleDelete = (e) => {
         todos.splice(e.target.id, 1);
         setTodos(todos);
-        // setCount(todos.length);
+        setCount(todos.length);
         localStorage.setItem("todos", JSON.stringify(todos));
     }
 
@@ -66,7 +67,7 @@ function Crud() {
                         <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
                         {/* <button onClick={handleLogs}>Logs</button> */}
                     </div>
-                    {/* <p className="Home__Counter">You have {count} ToDos left to complete</p> */}
+                    <p className="Home__Counter">You have {count} ToDos left to complete</p>
                 </div>
                 <div className="Home__ToDos">
                     {printArr()}
