@@ -11,6 +11,7 @@ function Crud() {
 
     if(!localStorage.getItem("todos")){
         localStorage.setItem("todos", JSON.stringify(todos));
+        setCount(JSON.parse(localArr).length)
     }
 
     useEffect(() => {
