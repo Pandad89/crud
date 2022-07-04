@@ -2,17 +2,20 @@ import React, { useState, useEffect } from "react";
 import './CRUD.css'
 
 function Crud() {
-    const localArr = localStorage.getItem("todos");
+
     
     const [title, setTitle] = useState("");
     const [todos, setTodos] = useState([]);
-    const [count, setCount] = useState([JSON.parse(localArr).length]);
-    
-    localStorage.setItem("todos", JSON.stringify(todos));
+    const localArr = localStorage.getItem("todos");
+    const [count, setCount] = useState(todos.length);
+
+    if(!localStorage.getItem("todos")){
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }
 
     useEffect(() => {
         setTodos(JSON.parse(localArr));
-    });
+    }, [localArr]);
 
     const handleChangeTitle = (e) => {
         setTitle(e.target.value);
