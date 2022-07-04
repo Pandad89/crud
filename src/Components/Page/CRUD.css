@@ -52,22 +52,39 @@
 .Home__CreateItem button:nth-child(2) {
     font-size: 1.2rem;
 }
+.Home__CreateItem__Input{
+    background-color: rgba(0, 255, 255, 0);
+    color:white;
+    text-shadow: black .1rem .35rem .4rem;
+    border: white 5px groove;
+    height: 3rem;
+}
 .Home__Container__HeaderL{
     text-align: center;
     font-size: 3.25rem;
     font-family: 'Roboto', sans-serif;
+    color:white;
+    text-shadow: black .1rem .35rem .4rem;
 }
 .Home__Container__HeaderS{
+    width: 20rem;
+    height: 2rem;
     position: absolute;
     left: 28.9rem;
     top: 18.5rem;
     font-family: 'Roboto', sans-serif;
+    color:white;
+    text-shadow: black .1rem .25rem .2rem;
     font-size: 1rem;
 }
 .Home__Counter {
+    width: 32rem;
+    height: 4rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     font-family: 'Roboto', sans-serif;
+    color:white;
+    text-shadow: black .1rem .25rem .2rem;
 }
 
 .ArrItem__Buttons {
@@ -85,7 +102,12 @@
     text-align: center;
     left: -3rem;
 }
-
+.Home__CreateItem__Buttons__Submit{
+    background-color: #efefef00;
+    color:white;
+    text-shadow: black .1rem .25rem .15rem;
+    border: white 5px groove;
+}
 .ArrItem__Buttons__Delete:hover {
     color: red;
     transition: ease-in-out .2s;
