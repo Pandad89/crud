@@ -48,9 +48,7 @@ function Crud() {
         return todos.map((item, e) => {
             return (
                 <div key={e} className="ArrItem">
-                    <div className="ArrItem__Buttons">
                         <button id={e} className="ArrItem__Buttons__Checkbox" onClick={handleDelete}>✓</button>
-                    </div>
                     <p className="ArrItem__Item">{item}</p>
                 </div>
             )
@@ -63,7 +61,7 @@ function Crud() {
                 <h1 className="Home__Container__HeaderL">Welcome to AEOTDLA</h1> <br />
                 <h6 className="Home__Container__HeaderS">(Adam's Extremely Original ToDo List App)</h6>
                 <div className="Home__CreateItem">
-                    <input className="Home__CreateItem__Input" placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={handleSubmit}></input>
+                    <input autoFocus className="Home__CreateItem__Input" placeholder="Write your ToDo here!" value={title} onChange={handleChangeTitle} onKeyDown={handleSubmit}></input>
                     <div className="Home__CreateItem__Buttons">
                         <button className="Home__CreateItem__Buttons__Submit" onClick={handleSubmit}>Submit ToDo</button>
                         {/* <button onClick={handleLogs}>Logs</button> */}

@@ -6,19 +6,17 @@
     background-position-x: 50rem;
     background-position-y: -9rem;
     background-repeat: no-repeat;
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
+    background: rgb(25, 180, 199);
+    background: linear-gradient(120deg, rgba(25, 180, 199, 1) 0%, rgba(25, 31, 199, 1) 50%, rgba(119, 25, 201, 1) 100%);
 }
 
 .Home__Container {
-    height: 57.8rem;
     height: 100vh;
-    width: 50.9rem;
-    
+    width: 35rem;
+    /* border: 2px solid red; */
     padding: 14.6rem 0 0 1rem;
-    background-image: url("../../Img/table.jpg");
-    background-repeat: no-repeat;
-    background-size: 200%;
 }
 
 .Home__CreateItem {
@@ -30,16 +28,19 @@
     justify-content: center;
     align-items: center;
 }
-.Home__CreateItem__Buttons{
+
+.Home__CreateItem__Buttons {
     display: flex;
     gap: 1rem;
 }
+
 .Home__CreateItem input {
     font-family: 'Roboto', sans-serif;
     padding-left: .5rem;
     font-size: 2rem;
-    width: 45rem;
+    width: 30rem;
 }
+
 .Home__CreateItem button {
     font-size: 1.5rem;
     width: 10rem;
@@ -47,43 +48,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
+
 .Home__CreateItem button:nth-child(2) {
     font-size: 1.2rem;
 }
-.Home__CreateItem__Input{
+
+.Home__CreateItem__Input {
     background-color: rgba(0, 255, 255, 0);
-    color:white;
+    color: white;
     text-shadow: black .1rem .35rem .4rem;
     border: white 5px groove;
     height: 3rem;
 }
-.Home__Container__HeaderL{
+
+.Home__Container__HeaderL {
     text-align: center;
     font-size: 3.25rem;
-    font-family: 'Roboto', sans-serif;
-    color:white;
+    /* font-family: 'Roboto', sans-serif; */
+    color: white;
     text-shadow: black .1rem .35rem .4rem;
 }
-.Home__Container__HeaderS{
+
+.Home__Container__HeaderS {
     width: 20rem;
     height: 2rem;
     position: absolute;
-    left: 28.9rem;
+    left: 19rem;
     top: 18.5rem;
-    font-family: 'Roboto', sans-serif;
-    color:white;
+    /* font-family: 'Roboto', sans-serif; */
+    color: white;
     text-shadow: black .1rem .25rem .2rem;
-    font-size: 1rem;
+    font-size: .85rem;
 }
+
 .Home__Counter {
     width: 32rem;
     height: 4rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    font-family: 'Roboto', sans-serif;
-    color:white;
+    /* font-family: 'Roboto', sans-serif; */
+    color: white;
     text-shadow: black .1rem .25rem .2rem;
 }
 
@@ -102,55 +108,69 @@
     text-align: center;
     left: -3rem;
 }
-.Home__CreateItem__Buttons__Submit{
+
+.Home__CreateItem__Buttons__Submit {
     background-color: #efefef00;
-    color:white;
+    color: white;
     text-shadow: black .1rem .25rem .15rem;
     border: white 5px groove;
 }
+
 .ArrItem__Buttons__Delete:hover {
     color: red;
     transition: ease-in-out .2s;
 }
 
 .ArrItem {
-    margin-bottom: -.35rem;
-    width: 49.6vw;
+    width: 22.6vw;
+    height: 5.5rem;
+    color: white;
+    text-shadow: black .1rem .35rem .4rem;
+    /* border: 2px solid red; */
     display: flex;
-
-}
-.ArrItem__Item{
- /* padding: Up Right Down  Left */
-    padding: 0  .5rem .3rem .3rem ;
-    margin:  -.25rem  0     0     0;
+    border-radius: 1rem;
 }
 
-.Home__ToDos{
+.ArrItem__Item {
+    /* border: 2px solid red; */
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    width: 24.9rem;
+    height: 5.5rem;
+    display: flex;
+    padding-left: .8rem;
+    align-items: center;
+}
+
+.Home__ToDos {
     position: absolute;
-    left: 60.5rem;
-    top: 0;
+    left: 35.9rem;
+    top: .5rem;
     display: flex;
-    flex-direction: column;
-    width: 47vw;
-    /* border: 1px solid red; */
+    gap: 1rem;
+    /* border: 2px solid red; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70.1vw;
+    /* height: 99.1vh; */
 }
-.ArrItem__Buttons__Checkbox{
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-top: .8rem;
+
+.ArrItem__Buttons__Checkbox {
+    width: 2rem;
+    height: 5.5rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: ease-in-out .2s;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 50%;
+    transition: ease-in-out .6s;
+    background-color: #833ab4;
     border: none;
 }
-.ArrItem__Buttons__Checkbox:hover{
-    transition: ease-in-out .2s;
-    color: #EFEFEF;
-    background-color: green;
-    border-radius: 50%;
+
+.ArrItem__Buttons__Checkbox:hover {
+    transition: ease-in-out .6s;
+    width: 5rem;
+    background: green;
+    color: white;
     border: none;
 }
